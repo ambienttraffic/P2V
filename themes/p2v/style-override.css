@@ -1,0 +1,99 @@
+/* @override http://www.wp.ambienttraffic.net/app/wp-content/themes/p2v/style.css */
+
+/*
+Theme Name: P2V
+Theme URI: https://github.com/ambienttraffic/P2V
+Description: Customized Child Theme for P2V, based on Mimbo
+Author: Tracie Lee
+Author URI: http://www.ambienttraffic.net
+Template: mimbo
+Version: 0.1
+*/
+ 
+@import url("../mimbo/style.css");
+
+body {
+	background: #6a88a2;
+	color: #343434;
+}
+#global-container {
+	background: transparent url(images/bottom_bkgnd_fade.gif) bottom left repeat-x;
+}
+#page {
+	position: relative;
+}
+h3{
+	font-family: "league-gothic-1","league-gothic-2", helvetica, sans-serif;
+	text-transform: uppercase;
+	font-weight:  400;
+	font-size: 28px;
+	color: #3b4c5b;
+	
+}
+h4 {
+	
+	font-family: "news-gothic-std-1","news-gothic-std-2", sans-serif;
+	font-weight:  400;
+}
+h4 a {
+	color: #cf3a3c !important;
+	font-size: 28px !important;
+}
+#nav {
+	
+	text-transform: uppercase;
+	background: rgba(59,76,91,0.8);
+	margin: 50px 150px 0 150px;
+	margin-top: ;
+}
+
+#nav a {
+	font-family: "news-gothic-std-1","news-gothic-std-2", sans-serif;
+	font-weight:  400;
+	font-size: 18px;
+	padding:  10px 15px;
+	color: #fff;
+}
+h1 {
+	background: url(images/p2v_logo.jpg) top left no-repeat;
+	height:  0;
+	overflow: hidden;
+	padding-top: 126px;
+	width: 99px;
+	display: block;
+	position: absolute;
+	z-index: 100;
+	border: 5px solid #4d5f6f;
+	top: -5px;
+}
+
+#sidebar h3 {
+	background: #cf3a3c;
+	color: #fff;
+	border-top:  0;
+	font-size: 20px;
+	padding: 5px 10px;
+}
+#donate-callout {
+	position: absolute;
+	top: 30px;
+	right: -20px;
+	z-index: 1000;
+}
+#donate-callout a {
+	display: block;
+	width: 229px;
+	padding-top: 111px;
+	height:  0;
+	overflow: hidden;
+	background: transparent url(images/dog_tag.png) top left no-repeat;
+	
+}
+#footer {
+	color: #fff;
+	background: #576f85 url(images/bottom_bkgnd_fade.gif) top left repeat-x;
+	display: block;
+}
+#footer a, #footer a:visited {
+	color: #fff;
+}
