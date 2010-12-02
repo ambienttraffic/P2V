@@ -1,0 +1,6 @@
+$postCount = 0;
+$page = (get_query_var('paged')) ? get_query_var('paged') : 1;
+query_posts( 'paged=$page&post_per_page=-1&cat=' . get_query_var('cat') );
+
+
+<?php echo get_post_image (get_the_id(), '', '', '' .get_bloginfo('template_url') .'/scripts/timthumb.php?zc=1&amp;w=105&amp;h=85&amp;src='); ?></a>

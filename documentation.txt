@@ -1,0 +1,26 @@
+To feature a post:
+This MUST be a post and you MUST have an image of the proper size in order to feature it on the homepage.
+1. Create a new post. 
+2. Upload an image at least 620 pixels wide and 375 pixels tall. If it is larger, that is fine.
+3. Insert the image at the top of the post.
+4. Publish the post. 
+5. Look at the list of posts. Hover over the title of the post you just created. A series of links will show up underneath the title. Click on the "Quick Edit" button.
+6. In the right column, look for the "Status" field. There is a checkbox that has a label called "Make this post sticky". Make sure this is selected, then save the post.
+7. The post should now show up on the homepage.
+
+To UNfeature a post (remove from the featured area):
+5. Look at the list of posts. Hover over the title of the post you want to unfeature. A series of links will show up underneath the title. Click on the "Quick Edit" button.
+6. In the right column, look for the "Status" field. There is a checkbox that has a label called "Make this post sticky". Make sure this is NOT selected, then save the post.
+7. The post should not be featured on the homepage anymore.
+
+To change the quote on the homepage:
+Go to "Our Friends" page. (http://www.p2v.org/wp-admin/post.php?post=1915&action=edit)
+Look for custom fields called "pullquote" and "pullquote author". Change the content, it will update on the homepage.
+
+Editing Widgets in the sidebar:
+go to Appearance > Widgets
+http://www.p2v.org/wp-admin/widgets.php
+Look at the column on the right
+click on the down arrow for the widget you want to edit
+edit the text
+click save

@@ -1,5 +1,12 @@
 <div id="sidebar">
-<?php if (is_home()) { ?> <div id="description"><?php bloginfo('description'); ?> </div> <?php } ?>
+<?php 
+/* reset query to get is_home to work */
+wp_reset_query();
+if (have_posts()) { ?>
+<?php if ( is_home() ) { ?> <div id="description"><?php bloginfo('description'); ?></div> <?php } ?>
+<?php } ?>
+
+
 
 <!--BEGIN 'MORE FROM THIS CATEGORY'-->		
 	<?php
@@ -40,12 +47,15 @@
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 	<?php if ($children) { ?>  
-					<h3><?php _e('In this section:','Mimbo'); ?></h3>
-					
+		<div class="widget" id="subnav">
+					<h3 class="widgettitle">In This Section</h3>
+					<div class="textwidget">
 					<ul class="subpages">
 					<?php if ($section_overview) {echo $section_overview;} ?>
 					<?php echo $children; ?>
 					</ul>
+					</diV>
+			</div>
 				<?php } ?>
 				
 	<?php endwhile; ?>
@@ -57,6 +67,7 @@
 
 
 <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Mimbo Sidebar') ) : ?><?php endif; ?>
- 		
+ 	
+
 
 </div><!--END SIDEBAR-->

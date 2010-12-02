@@ -27,6 +27,23 @@
 
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/dropdowns.js"></script>
 
+<?php if ( is_home()) {?>
+<!-- jquery for featured posts rotation on homepage -->
+<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery.js"></script>
+<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery.cycle.lite.1.0.min.js"></script>
+<script>
+$(document).ready(function() {
+    $('.slideshow').cycle({
+		fx: 'fade', // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+		prev:   '#prev',
+		next:   '#next',
+		timeout: 4000
+	});
+});
+
+</script>
+<?php } ?>
+
 <?php if ( is_singular() ) wp_enqueue_script('comment-reply'); // support for comment threading ?>
 
 <?php wp_head(); ?>
@@ -40,9 +57,11 @@
 
 <ul id="nav" class="clearfloat">
 <li <?php if ( is_home() ) { ?> class="current_page_item"<?php } ?>><a href="<?php echo get_option('home'); ?>/"><?php _e('Home','Mimbo'); ?></a></li> 
-<?php wp_list_categories('exclude=1&title_li=&hide_empty=0'); ?>
+
+<?php wp_list_pages('sort_column=menu_order&title_li=&depth=1'); ?>
+
 </ul>
-<div id="donate-callout"><a href="<?php echo get_option('home'); ?>/donate.php">Donate</a></div>
+<div id="donate-callout"><a href="<?php echo get_option('home'); ?>/get-involved/donate/">Donate</a></div>
 <div id="wrapper" class="clearfloat">
 
 

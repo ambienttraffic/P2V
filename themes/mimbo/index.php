@@ -1,23 +1,28 @@
 <?php get_header(); ?>
 
-<?php if (have_posts()) { ?>
+
 
 <div id="content">
-
+	<div id="slideshowcontrols">
+		<a id="prev" href="#">&laquo;</a><a id="next" href="#">&raquo;</a>
+		</div>
+<div class="slideshow">
  <?php
-	$postCount = 0;
-	$page = (get_query_var('paged')) ? get_query_var('paged') : 1;
-	query_posts( 'paged=$page&post_per_page=-1&cat=' . get_query_var('cat') );
+	
+	$stickyposts = array('post__in'=>get_option('sticky_posts'));
+	query_posts($stickyposts);
 	while (have_posts()) { the_post(); 
-		if( $postcount == 0 ) { 
-		//GETS LATEST OR STICKY POST
+		//GETS ALL STICKY POSTS
 	?>
 	        
     <div id="lead" class="clearfloat">
-			 
+	<div id="lead-text">
+		<h2><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>">
+	    <?php the_title(); ?></a></h2>
+	</div>
 			<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>">
-<?php echo get_post_image (get_the_id(), '', '', '' .get_bloginfo('template_url') .'/scripts/timthumb.php?zc=1&amp;w=260&amp;h=230&amp;src='); ?></a>
-    
+<?php echo get_post_image (get_the_id(), '', '', '' .get_bloginfo('template_url') .'/scripts/timthumb.php?zc=1&amp;w=620&amp;h=375&amp;src='); ?></a>
+    <!--
 	<div id="lead-text">
     <h2><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>">
     <?php the_title(); ?></a> <span class="commentcount"> (<?php comments_popup_link('0', '1', '%'); ?>)</span></h2>
@@ -25,63 +30,46 @@
    
     <p class="date"><?php the_time('n/d/y'); ?> &bull; </p>
 	<?php the_excerpt(); ?>
-	</div>
-			</div><!--END LEAD/STICKY POST-->
-			
-		
-		<div id="more-posts">
-		<h3><?php _e('Recent Posts','Mimbo'); ?></h3>
-		
+	</div>-->
+			</div><!--END LEAD/STICKY POSTS-->
 		<?php
 		}
-		elseif( $postcount > 0 && $postcount <= 4 ) { 
-		//GETS NEXT FOUR EXCERPTS
+		?>
+		</div> <!-- END FEATURED AREA -->
+	
+		<div id="pullquote">
+			<div id="pullquote-text"><?php echo get_post_meta('1915', 'pullquote', 'true');?></div>
+			<div id="pullquote-author"><?php echo get_post_meta('1915', 'pullquote_author', 'true');?></div>
+		</div>
+		
+		<div id="more-posts">
+		<h3>In the Media</h3>
+		<?php
+		wp_reset_query();
+		$page = (get_query_var('paged')) ? get_query_var('paged') : 1;
+		query_posts( 'paged=$page&post_per_page=4&cat=9' );
+		while (have_posts()) { the_post(); 
 		?>
 			
 		<div class="clearfloat recent-excerpts">
 			<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>">
-<?php echo get_post_image (get_the_id(), '', '', '' .get_bloginfo('template_url') .'/scripts/timthumb.php?zc=1&amp;w=105&amp;h=85&amp;src='); ?></a>
 
-<h4><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a> <span class="commentcount">(<?php comments_popup_link('0', '1', '%'); ?>)</span></h4>
+<?php if ( comments_open() ) : ?><?php comments_popup_link( '0', '1', '%', 'comments-link', 'Comments are off for this post'); ?></a><?php endif; ?>
+<h4><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a> 
+</h4>
 
 <p class="date"><?php the_time('n/d/y'); ?> &bull; </p>
 			<?php the_excerpt(); ?>
 		</div>
-						
-<?php //GETS NEXT HEADLINES
+		<?php
 		}
-		else { 
-			ob_start();
-			echo '<li><a href="'; 
-			the_permalink();
-			echo '">';
-			the_title();
-			echo '</a></li>';
-			$links[] = ob_get_contents();
-			ob_end_clean();			
-		}
-		$postcount ++;
-		}
-	}
-	else {
-?>
-
-<?php } ?>
-	
-	
-<?php 
-	if(count($links)): ?>
-
-	 <h3><?php _e('Older Posts','Mimbo'); ?></h3>
-	 <ul class="headlines"><?php echo join("\n", $links); ?></ul>
-			
-	<?php endif; ?>
+		?>
+				
 	</div><!--END RECENT/OLDER POSTS-->
 	
     
-    
 	<div id="featured-cats"> 
-	<h3><?php _e('Featured Categories','Mimbo'); ?></h3>
+	<h3>Recent Matches</h3>
 
 		<?php
         $display_categories = get_option('openbook_cats');
@@ -98,6 +86,37 @@
         <?php endwhile; ?>
         </ul>
 	<?php } ?>
+	<script src="http://widgets.twimg.com/j/2/widget.js"></script>
+	<script>
+	new TWTR.Widget({
+	  version: 2,
+	  type: 'profile',
+	  rpp: 5,
+	  interval: 6000,
+	  width: 182,
+	  height: 500,
+	  theme: {
+	    shell: {
+	      background: '#d2dbe3',
+	      color: '#3b4c5b'
+	    },
+	    tweets: {
+	      background: '#ffffff',
+	      color: '#787878',
+	      links: '#cf3a3c'
+	    }
+	  },
+	  features: {
+	    scrollbar: false,
+	    loop: false,
+	    live: false,
+	    hashtags: true,
+	    timestamp: true,
+	    avatars: false,
+	    behavior: 'all'
+	  }
+	}).render().setUser('PETS2VETS').start();
+	</script>
     
 </div><!--END FEATURED CATS-->
 
