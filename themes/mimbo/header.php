@@ -39,7 +39,10 @@ $(document).ready(function() {
 		next:   '#next',
 		timeout: 4000
 	});
+
 });
+
+
 
 </script>
 <?php } ?>

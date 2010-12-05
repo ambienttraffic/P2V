@@ -64,7 +64,7 @@
 		<?php
 		}
 		?>
-				
+		<div class="recent-excerpts"><a href="<?php echo get_option('home'); ?>/about/in-the-media">More Media &raquo;</a></div>
 	</div><!--END RECENT/OLDER POSTS-->
 	
     
@@ -93,7 +93,7 @@
 	  type: 'profile',
 	  rpp: 5,
 	  interval: 6000,
-	  width: 182,
+	  width: 150,
 	  height: 500,
 	  theme: {
 	    shell: {

@@ -24,3 +24,42 @@ Look at the column on the right
 click on the down arrow for the widget you want to edit
 edit the text
 click save
+
+When to use a post:
+1. A single piece of content that is an Event, a media mention (video, a quote, podcast, etc), a newsletter, a featured "heroes and pets", a match. 
+
+How to post an event:
+1. Click on "Add New" under "Posts" menu in sidebar
+2. Enter title and info about the event
+3. add "events" category in right sidebar - THIS IS IMPORTANT
+4. Click "publish" or "save draft"
+
+How to post a news item:
+1. Click on "Add New" under "Posts" menu in sidebar
+2. Enter title for the news item; can be the same as the title of the video or article
+3. Enter text/description. This could also be a quote from the article, highlight the text that you want to quote and click on the quote icon in the format bar above the text field. Also, add images if you like. NOTE THAT THE FIRST IMAGE WILL BE USED AS THE THUMBNAIL THROUGHOUT THE SITE
+IF YOU WANT TO EMBED A VIDEO: 
+a. switch to HTML mode on the tab to the right above the text field
+b. paste the video code into the text field
+c. IMPORTANT: PASTE THE VIDEO CODE INTO THE EXCERPT FIELD AS WELL IF YOU WANT THE VIDEO TO SHOW UP ON THE HOMEPAGE
+
+4. Choose the category "In the Media"
+5. Click "publish" or "save draft"
+
+HOW TO POST A NEWSLETTER
+1. Click on "Add New" under "Posts" menu in sidebar
+2. Enter newsletter title (ex.: September 2010) and newsletter html (like previous directions)
+3. add "Newsletters" category - THIS IS IMPORTANT
+4. Click "publish" or "save draft"
+
+How to post a Featured Heroes and Pets:
+1. Click on "Add New" under "Posts" menu in sidebar
+2. Enter title, text and images
+3. add "Featured Heroes and Pets" category in right sidebar - THIS IS IMPORTANT
+4. Click "publish" or "save draft"
+
+How to post a P2V Match:
+1. Click on "Add New" under "Posts" menu in sidebar
+2. Enter title, text and images
+3. add "P2V Matches" category in right sidebar - THIS IS IMPORTANT
+4. Click "publish" or "save draft"

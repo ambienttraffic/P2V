@@ -1,4 +1,6 @@
-/* @override http://www.wp.ambienttraffic.net/app/wp-content/themes/p2v/style.css */
+/* @override 
+	http://www.wp.ambienttraffic.net/app/wp-content/themes/p2v/style.css
+*/
 
 /*
 Theme Name: P2V
@@ -53,6 +55,7 @@ h4 {
 h4 a {
 	color: #cf3a3c !important;
 	font-size: 1.5em !important;
+	line-height: 1.25em;
 }
 
 
@@ -279,6 +282,11 @@ h1 a{
 #pullquote-text {background: url(images/quotes_left.gif) top left no-repeat;padding: 10px 50px 0; font-size: 24px; font-family: Georgia, Times, "Times New Roman", serif; }
 #pullquote-author {text-align: right;font-family: Georgia, Times, "Times New Roman", serif; padding: 5px 50px 20px 0;background: url(images/quotes_right.gif) bottom right no-repeat;}
 
+#more-posts {width: 450px;}
+#featured-cats {width: 150px;}
+#more-posts .recent-excerpts {max-width: 100%;}
+#more-posts embed, #more-posts object {width: 100% !important;}
+
 
 /* @end */
 
@@ -330,6 +338,33 @@ h1 a{
 
 /* @end */
 
+/* @group Archives */
+.archive-list li {
+	list-style:none;
+	width: auto;
+	height: auto;
+	float: none;
+	margin: 8px 25px 18px 0;
+	border-bottom:1px dotted #b1b1b1;
+	}
+
+.archive-list img {
+	margin:0 5px 0 0 !important;
+	}
+
+.archive-list .postmetadata {
+	border:none;
+	margin-left: 100px;
+	padding:4px 0 0 0;
+	font-size: 0.85em;
+	}
+.archive-list h4 {margin-left: 100px; }
+
+.archive-list p {margin-left: 100px;}
+
+
+/* @end */
+
 /* @group Post */
 
 /* @group Comments */
@@ -346,8 +381,8 @@ a.comments-link, a.comments-link:link {color: #3b4c5b !important;}
 
 /* @end */
 
-.post h2 {
-	font-family: "news-gothic-std-1","news-gothic-std-2", sans-serif;
+.post h2, h2.pagetitle {
+	font-family: "news-gothic-std-1","news-gothic-std-2", sans-serif !important;
 	font-weight: 400;
 	font-size: 2.5em;
 }

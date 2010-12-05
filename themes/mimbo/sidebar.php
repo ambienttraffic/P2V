@@ -20,7 +20,8 @@ if (have_posts()) { ?>
 	
 	<div class="widget">
 	<h3><?php _e('More in','Mimbo'); ?> '<?php echo $category->name; ?>'</h3>
-	<ul>
+	<div class="textwidget">
+	<ul class="subpages">
 	
 	<?php foreach($posts as $post) : ?>
 	<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
@@ -28,7 +29,7 @@ if (have_posts()) { ?>
 	
 	</ul>
 	</div>
-	
+	</div>
 	<?php } ?>
 
 <?php endforeach; ?>

@@ -21,26 +21,23 @@
 			</div>
 		</div>
         <?php edit_post_link(__('Edit this entry','Mimbo'), '<p>', ' &raquo;</p>'); ?>
-		<?php // If a page has a related_category in a custom field, output the latest 10 posts from the related category ?>
+		<?php // If a page has a related_category in a custom field (use the slug), output the latest 10 posts from the related category ?>
         <?php 
 		$relatedcategory = get_post_meta($post->ID, related_category, true);
 		
 		if ($relatedcategory!=""){?>
 			<?php $temp_query = $wp_query; ?>
 			<?php query_posts('category_name=' . $relatedcategory . '&posts_per_page=10'); ?>
-
-			<?php while (have_posts()) : the_post(); ?>
-			<div class="clearfloat recent-excerpts">
-				<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>">
-	<h4><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a> </h4>
-	<p class="date"><?php the_time('n/d/y'); ?> &bull; </p>
-				<?php the_excerpt(); ?>
-			</div>
-			<?php endwhile; 
-			// Get the ID of a given category
-			    $category_id = get_cat_ID($relatedcategory);
+			<ul class="archive-list clearfloat">
+			<?php while (have_posts()) : the_post();
+			include (TEMPLATEPATH . '/archivelist.php'); 
+			endwhile; ?>
+			</ul>
+			<?php // Get the ID of a given category
+				$idObj = get_category_by_slug($relatedcategory); 
+				$categoryid = $idObj->term_id;
 			?>
-			<a href="<?php echo get_category_link($category_id);?>">More &raquo;</a>
+			<a href="<?php echo get_category_link($categoryid);?>">More &raquo;</a>
 			<?php $wp_query = $temp_query; ?>
 			
 		<?php }?>
