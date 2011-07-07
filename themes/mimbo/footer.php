@@ -19,7 +19,7 @@
 	<!-- END: Constant Contact Stylish Email Newsletter Form -->
 	<!-- BEGIN: SafeSubscribe -->
 
-<!-->	<div><a href="http://www.constantcontact.com/safesubscribe.jsp" target="_blank"><img src="https://imgssl.constantcontact.com/ui/images1/safe_subscribe_logo.gif" border="0" alt="" width="168" height="14" /></a></div>-->
+<!--	<div><a href="http://www.constantcontact.com/safesubscribe.jsp" target="_blank"><img src="https://imgssl.constantcontact.com/ui/images1/safe_subscribe_logo.gif" border="0" alt="" width="168" height="14" /></a></div>-->
 	<!-- END: SafeSubscribe -->
 	<!-- BEGIN: Email Marketing you can trust -->
 

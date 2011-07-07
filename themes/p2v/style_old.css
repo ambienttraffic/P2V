@@ -1,0 +1,47 @@
+/*
+Theme Name: P2V
+Theme URI: https://github.com/ambienttraffic/P2V
+Description: Customized Child Theme for P2V, based on Mimbo
+Author: Tracie Lee
+Author URI: http://www.ambienttraffic.net
+Template: mimbo
+Version: 0.1
+*/
+ 
+@import url("../mimbo/style.css");
+
+body {
+	background: #6a88a2;
+	color: #343434;
+}
+h2, h3, h4, h5, h6 {
+	font-family: "league-gothic-1","league-gothic-2", helvetica, sans-serif;
+}
+h3 {
+	text-transform: uppercase;
+}
+#nav {
+	font-family: "news-gothic-std-1","news-gothic-std-2", sans-serif;
+	text-transform: uppercase;
+	background: rgba(59,76,91,0.8);
+	margin: 50px 150px 0 150px;
+	margin-top: ;
+}
+
+#nav a {
+	font-size: 18px;
+	padding:  10px 15px;
+	color: #fff;
+}
+h1 {
+	background: url(images/p2v_logo.jpg) top left no-repeat;
+	height:  0;
+	overflow: hidden;
+	padding-top: 126px;
+	width: 99px;
+	display: block;
+	position: absolute;
+	z-index: 100;
+	border: 5px solid #4d5f6f;
+	top: -5px;
+}

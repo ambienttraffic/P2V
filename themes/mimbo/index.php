@@ -59,6 +59,7 @@
 </h4>
 
 <p class="date"><?php the_time('n/d/y'); ?> &bull; </p>
+<?php echo get_post_meta($post->ID, 'Video', 'true'); ?>
 			<?php the_excerpt(); ?>
 		</div>
 		<?php
@@ -82,7 +83,7 @@
 
         <ul>
         <?php while (have_posts()) : the_post(); ?>
-        <li class="clearfloat"><p class="date"><?php the_time('n/d/y'); ?> &bull; </p><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></li>
+        <li class="clearfloat"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></li>
         <?php endwhile; ?>
         </ul>
 	<?php } ?>

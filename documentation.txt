@@ -41,8 +41,7 @@ How to post a news item:
 IF YOU WANT TO EMBED A VIDEO: 
 a. switch to HTML mode on the tab to the right above the text field
 b. paste the video code into the text field
-c. IMPORTANT: PASTE THE VIDEO CODE INTO THE EXCERPT FIELD AS WELL IF YOU WANT THE VIDEO TO SHOW UP ON THE HOMEPAGE
-
+c. IMPORTANT: Under Custom fields, be sure to add a field of type "Video". Paste the Video code into this field, click "Add Custom Field" IF YOU WANT THE VIDEO TO SHOW UP ON THE HOMEPAGE
 4. Choose the category "In the Media"
 5. Click "publish" or "save draft"
 
